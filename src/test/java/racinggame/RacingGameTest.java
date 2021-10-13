@@ -49,6 +49,7 @@ public class RacingGameTest {
         racingGame.startGame();
         if(racingGame.isEndGame()){
             racingGame.showGameResult();
+            racingGame.showWinnerCars();
         }
     }
 }

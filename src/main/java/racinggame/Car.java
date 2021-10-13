@@ -3,6 +3,7 @@ package racinggame;
 public class Car {
     private CarName carName;
     private LapRecords lapRecords;
+    private int resultLap;
 
     public Car(String name) {
         this.carName = new CarName(name);
@@ -27,5 +28,13 @@ public class Car {
             cumulativeLap += lapRecords.getLapRecord(i).getDrivingDistance().getRecord();
         }
         return cumulativeLap;
+    }
+
+    public void setResultLap(int resultLap) {
+        this.resultLap = resultLap;
+    }
+
+    public boolean isResultLap(int lap){
+        return resultLap == lap;
     }
 }
