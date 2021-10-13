@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CarTest {
     @Test
     @DisplayName("자동차 생성시 이름 입력")
-    void new_car(){
+    void createCar(){
         String input = "tom";
         Car tomCar = new Car(input);
         assertThat(tomCar.getName()).isEqualTo(input);

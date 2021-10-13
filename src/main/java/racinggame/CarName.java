@@ -5,13 +5,24 @@ public class CarName {
     private String name;
 
     public CarName(String name) {
+        if(isBlank(name)){
+            throw new IllegalArgumentException(ExceptionMessage.CAR_NAME_NULL.getMessage());
+        }
         if(name.length() > LIMIT_LENGTH){
-            throw new IllegalArgumentException("[ERROR] 이름은 5글자만 입력 할 수 있습니다.");
+            throw new IllegalArgumentException(ExceptionMessage.CAR_NAME_LENTH.getMessage());
         }
         this.name = name;
+    }
+
+    public boolean isBlank(String str){
+        if(str == null || str.trim().isEmpty()){
+            return true;
+        }
+        return false;
     }
 
     public String getName(){
         return name;
     }
+
 }
