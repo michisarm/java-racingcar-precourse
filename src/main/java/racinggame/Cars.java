@@ -19,7 +19,13 @@ public class Cars {
         return racingCar;
     }
 
-    public List<Car> getRegisterCar(){
+    public List<Car> getRacingCar(){
         return racingCar;
+    }
+
+    public void runTrack(int lap) {
+        for (Car car : racingCar) {
+            car.lapRecord(lap);
+        }
     }
 }

@@ -18,7 +18,7 @@ public class CarsTest {
 
         // 생성된 자동차 확인
         List<String> inputCars = Arrays.asList(input.trim().split("\\s*,\\s*"));
-        for (Car car : cars.getRegisterCar()) {
+        for (Car car : cars.getRacingCar()) {
             assertThat(inputCars.contains(car.getName())).isTrue();
         }
     }
