@@ -9,8 +9,8 @@ public class RacingGame {
     private Boolean isEndGame = false;
     ArrayList<String> winnerList;
 
-    public RacingGame(int input, Cars racingCars) {
-        this.lapCount = input;
+    public RacingGame(String input, Cars racingCars) {
+        this.lapCount = StringToNumber(input);
         this.racingCars = racingCars;
     }
 
@@ -62,5 +62,12 @@ public class RacingGame {
         winnerList = new ArrayList<>();
         setMaxLapCars(lapCount, racingCars);
         ConsoleView.winnerCars(winnerList);
+    }
+
+    public static Integer StringToNumber(String input) {
+        if(!Character.isDigit(input.charAt(0))){
+            throw new NumberFormatException("[ERROR] 숫자만 입력가능합니다");
+        }
+        return Integer.parseInt(input);
     }
 }

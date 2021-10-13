@@ -1,7 +1,16 @@
 package racinggame;
 
+
 public class Application {
     public static void main(String[] args) {
-        // TODO 자동차 경주 게임 구현
+        String inputRacingCar = ConsoleView.readCar();
+        Cars cars = new Cars(inputRacingCar);
+        String inputLapCount = ConsoleView.readLap();
+        RacingGame racingGame = new RacingGame(inputLapCount, cars);
+        racingGame.startGame();
+        if(racingGame.isEndGame()){
+            racingGame.showGameResult();
+            racingGame.showWinnerCars();
+        }
     }
 }

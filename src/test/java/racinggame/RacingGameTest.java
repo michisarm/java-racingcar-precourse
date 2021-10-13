@@ -9,14 +9,14 @@ import java.util.stream.Collectors;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class RacingGameTest {
-    int inputLapCount;
+    String inputLapCount;
     String inputRacingCar;
     Cars cars;
     RacingGame racingGame;
 
     @BeforeEach
     void setup(){
-        inputLapCount = 5;
+        inputLapCount = "5";
         inputRacingCar = "son, paca, july";
         cars = new Cars(inputRacingCar);
         racingGame = new RacingGame(inputLapCount, cars);
