@@ -11,7 +11,7 @@ public class LapRecords {
     }
 
     public void registerLapRecords(int lap){
-        racingCar.add(new Lap(lap, "-"));
+        racingCar.add(new Lap(lap));
     }
 
     public Lap getLapRecord(int lap){

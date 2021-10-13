@@ -39,7 +39,7 @@ public class RacingGameTest {
     void runRacingGame(){
         racingGame.startGame();
         for (Car car : racingGame.getRacingCars().getRacingCar()) {
-            assertThat(car.getLap(0).getDrivingDistance()).isEqualTo("-");
+            assertThat(car.getLap(0).getDrivingDistance()).isExactlyInstanceOf(DrivingDistance.class);
         }
     }
 }
