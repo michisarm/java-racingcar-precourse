@@ -42,4 +42,13 @@ public class RacingGameTest {
             assertThat(car.getLap(0).getDrivingDistance()).isExactlyInstanceOf(DrivingDistance.class);
         }
     }
+
+    @Test
+    @DisplayName("자동차 경주 완료 후 자동차 기록 확인")
+    void endRacingGame(){
+        racingGame.startGame();
+        if(racingGame.isEndGame()){
+            racingGame.showGameResult();
+        }
+    }
 }

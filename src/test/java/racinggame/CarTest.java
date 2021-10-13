@@ -23,4 +23,5 @@ public class CarTest {
         }
         assertThat(thrown).isTrue();
     }
+
 }

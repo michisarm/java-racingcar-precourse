@@ -20,4 +20,12 @@ public class Car {
     public Lap getLap(int lap){
         return lapRecords.getLapRecord(lap);
     }
+
+    public String cumulativeLap(int lap){
+        String cumulativeLap = "";
+        for (int i = 0; i <= lap; i++){
+            cumulativeLap += lapRecords.getLapRecord(i).getDrivingDistance().getRecord();
+        }
+        return cumulativeLap;
+    }
 }
